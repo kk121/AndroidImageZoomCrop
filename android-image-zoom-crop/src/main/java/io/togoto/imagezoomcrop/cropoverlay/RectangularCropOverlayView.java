@@ -68,14 +68,14 @@ public class RectangularCropOverlayView extends View implements IGetImageBounds 
     public RectangularCropOverlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mContext = context;
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CircularCropOverlayView, 0, 0);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.CropOverlayView, 0, 0);
         try {
-            mGuidelines = ta.getBoolean(R.styleable.CircularCropOverlayView_guideLines, DEFAULT_GUIDELINES);
-            mMarginTop = ta.getDimensionPixelSize(R.styleable.CircularCropOverlayView_marginTop, DEFAULT_MARGINTOP);
-            mMarginSide = ta.getDimensionPixelSize(R.styleable.CircularCropOverlayView_marginSide, DEFAULT_MARGINSIDE);
+            mGuidelines = ta.getBoolean(R.styleable.CropOverlayView_guideLines, DEFAULT_GUIDELINES);
+            mMarginTop = ta.getDimensionPixelSize(R.styleable.CropOverlayView_marginTop, DEFAULT_MARGINTOP);
+            mMarginSide = ta.getDimensionPixelSize(R.styleable.CropOverlayView_marginSide, DEFAULT_MARGINSIDE);
             final float defaultRadius = TypedValue.applyDimension(
                     TypedValue.COMPLEX_UNIT_DIP, DEFAULT_CORNER_RADIUS, mContext.getResources().getDisplayMetrics());
-            mOverlayColor = ta.getColor(R.styleable.CircularCropOverlayView_overlayColor, DEFAULT_OVERLAY_COLOR);
+            mOverlayColor = ta.getColor(R.styleable.CropOverlayView_overlayColor, DEFAULT_OVERLAY_COLOR);
         } finally {
             ta.recycle();
         }
